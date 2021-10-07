@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -154,13 +155,15 @@ public class DetalleFragment extends Fragment
 
     @Override
     public void onPrepared(MediaPlayer mediaPlayer) {
+        Log.d("Preparado!", "Preparado");
         mediaPlayer.start();
         mediaController.setMediaPlayer(this);
         mediaController.setAnchorView(
                 getView().findViewById(R.id.fragment_detalle_layout_root));
+        mediaController.setPadding(0,0,0,110);
         mediaController.setEnabled(true);
         mediaController.show();
-
+        mediaPlayer.start();
 
     }
 
@@ -176,22 +179,22 @@ public class DetalleFragment extends Fragment
 
     @Override
     public int getDuration() {
-        return 0;
+        return mediaPlayer.getDuration();
     }
 
     @Override
     public int getCurrentPosition() {
-        return 0;
+        return mediaPlayer.getCurrentPosition();
     }
 
     @Override
     public void seekTo(int i) {
-
+        mediaPlayer.seekTo(i);
     }
 
     @Override
     public boolean isPlaying() {
-        return false;
+        return mediaPlayer.isPlaying();
     }
 
     @Override
@@ -201,17 +204,17 @@ public class DetalleFragment extends Fragment
 
     @Override
     public boolean canPause() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean canSeekBackward() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean canSeekForward() {
-        return false;
+        return true;
     }
 
     @Override
@@ -223,5 +226,12 @@ public class DetalleFragment extends Fragment
     public boolean onTouch(View view, MotionEvent motionEvent) {
         mediaController.show();
         return false;
+    }
+
+    @Override
+    public void onStop() {
+        mediaPlayer.stop();
+        mediaPlayer.release();
+        super.onStop();
     }
 }
