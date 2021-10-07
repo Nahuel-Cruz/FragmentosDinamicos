@@ -20,8 +20,6 @@
         android:minHeight="48dp"
         tools:ignore="SpeakableTextPresentCheck" />
 
-
-
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
@@ -30,7 +28,7 @@
         android:layout_below="@+id/spnGeneros"
         android:layout_alignParentRight="true"
         android:gravity="center"
-        android:text="Título"
+        android:text="TÃ­tulo"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/black" />
