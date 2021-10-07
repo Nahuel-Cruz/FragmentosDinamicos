@@ -234,4 +234,5 @@ public class DetalleFragment extends Fragment
         mediaPlayer.release();
         super.onStop();
     }
+
 }
