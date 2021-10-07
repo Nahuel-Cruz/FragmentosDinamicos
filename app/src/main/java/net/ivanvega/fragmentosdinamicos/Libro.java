@@ -6,7 +6,8 @@ public class Libro {
 
     static Vector<Libro> libros = new Vector<Libro>();
     static{
-        final String link1 = "";
+        final String link1 =
+                "https://cf-media.sndcdn.com/ttl4D3sfzY34.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vdHRsNEQzc2Z6WTM0LjEyOC5tcDMqIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjMzNjMyMjg4fX19XX0_&Signature=cseoBJs-wnbihJ~75ZsQAK2fdAuDTwMPa3uhZ9edi7JJ1Og6MckOB-6zDZihnu~~ObM0Nx4wMirgmUbslZvIKlRM3mexdxGTR88nFRppCSWwLO6DNtTCvGxy8LFU~GldRQMFcTWnQg7uL77Q0gigfTwKfFBWiVgDArckKpyLNdwCWdhHhG4nIZv~SXNx-GpBLzf7owuuzkDmFC~05x-oep4K4OHzGs9KrJO2LzJklwzGtdUJKIWviK0HCZjtU3atMV7DgwByEtLesKfcjE2YBW6ORsMoCyOx8~Y2KxeTP6qnMmCAQYsvTC~DiIr6g92ERIRETCWrodwPBjXoFr14aw__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ";
 
 
         libros.add(new Libro("Kappa", "Akutagawa", R.drawable.kappa, link1, Libro.G_S_XIX, false, true));

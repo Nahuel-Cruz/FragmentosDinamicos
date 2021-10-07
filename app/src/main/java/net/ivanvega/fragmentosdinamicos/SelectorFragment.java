@@ -212,6 +212,7 @@ public class SelectorFragment extends Fragment {
 
         TabLayout tabs = myActivityView.findViewById(R.id.tabs);
         if(tabs!=null) {
+            tabs.removeAllTabs();
             tabs.addTab(tabs.newTab().setText("Todos"));
             tabs.addTab(tabs.newTab().setText("Nuevos"));
             tabs.addTab(tabs.newTab().setText("Leidos"));
